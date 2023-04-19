@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="circleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">#000000</item>
+    </style>
+
+    <style name="Toolbar.TitleCentered" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textAlignment">center</item>
+    </style>
+</resources>
