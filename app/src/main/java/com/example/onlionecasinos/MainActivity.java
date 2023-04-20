@@ -27,8 +27,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
 
-        editor.putBoolean("isMarried", false);
-        editor.apply();
+
 
         binding.usa.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,6 +132,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 editor.putString("country", "Italy");
+                editor.apply();
+
+                Intent intent = new Intent(MainActivity.this, Home.class);
+
+                startActivity(intent);
+
+            }
+        });
+
+        binding.spain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editor.putString("country", "Spain");
                 editor.apply();
 
                 Intent intent = new Intent(MainActivity.this, Home.class);

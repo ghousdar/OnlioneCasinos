@@ -30,7 +30,7 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
 
 
-    String data ;
+    String data;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -120,7 +120,7 @@ public class HomeFragment extends Fragment {
         }
 
 
-        if(data.equals("Canada"))
+       else if(data.equals("Canada"))
         {
             CountryModel[] models = new CountryModel[]{
                     new CountryModel(R.drawable.canada_magicredbanner,R.drawable.canada_magicrecasino,"Magic Red Casino","9.9","\"\tMagic Red Casino offers a modern and sleek gaming experience with a wide selection of games. Their welcome bonus is generous, and the free spins add an extra level of excitement. The site is mobile-friendly, and their customer support is available 24/7. The withdrawal process can be a bit slow, but overall it's a great casino for players looking for a variety of games.\"\n"),
@@ -148,12 +148,12 @@ public class HomeFragment extends Fragment {
             };
 
             horizontalListAdapteradapter =  new HorizontalListAdapter(getContext(),models);
-
+            verticalListAdapter = new VerticalListAdapter(getContext(),models);
 
         }
 
 
-        if(data.equals("Australia"))
+        else  if(data.equals("Australia"))
         {
             CountryModel[] models = new CountryModel[]{
                     new CountryModel(R.drawable.canada_casionly,R.drawable.canada_icon_casionly,"Casinoly","9.5","\"Woo Casino promises to woo players with their astounding selection of over one thousand instant play casino games. This means that you’ll access all games straight from your web browser without downloading any software. These casino game titles have been developed by top-tier software providers, including Amatic, Microgaming, NetEnt, and Pragmatic Play. You can even filter the games by developer, so it's easy to find your favorites.\n" +
@@ -186,13 +186,13 @@ public class HomeFragment extends Fragment {
             };
 
             horizontalListAdapteradapter =  new HorizontalListAdapter(getContext(),models);
-
+            verticalListAdapter = new VerticalListAdapter(getContext(),models);
 
         }
 
 
 
-        if(data.equals("Germany"))
+        else if(data.equals("Germany"))
         {
             CountryModel[] models = new CountryModel[]{
                     new CountryModel(R.drawable.canada_casionly,R.drawable.canada_icon_casionly,"Casinoly","9.1","Casinoly ist ein beliebtes Casino mit einer großen Auswahl an Spielen und großzügigen Bonusangeboten. Neue Spieler können einen 200% Bonus auf ihre erste Einzahlung sowie 200 Freispiele erhalten. Das Casino bietet auch regelmäßige Aktionen und Boni für treue Spieler. Die Website von Casinoly ist benutzerfreundlich und einfach zu navigieren. Das Casino bietet auch schnelle Auszahlungen und hervorragenden Kundensupport. Insgesamt ist Casinoly ein großartiger Ort für Spieler, die nach einem unterhaltsamen und lohnenden Casino-Erlebnis suchen.\n"),
@@ -208,12 +208,12 @@ public class HomeFragment extends Fragment {
             };
 
             horizontalListAdapteradapter =  new HorizontalListAdapter(getContext(),models);
-
+            verticalListAdapter = new VerticalListAdapter(getContext(),models);
 
         }
 
 
-        if(data.equals("France"))
+        else  if(data.equals("France"))
         {
             CountryModel[] models = new CountryModel[]{
                     new CountryModel(R.drawable.france_agentspin,R.drawable.france_icon_agentspin,"Agent spins","9.3","Agent spins est un casino en ligne relativement nouveau qui a rapidement gagné en popularité grâce à ses offres généreuses et son large choix de jeux. En plus du bonus de bienvenue de 200% jusqu'à 400 € et des 120 tours gratuits, le casino propose régulièrement des promotions pour ses joueurs fidèles. Les joueurs peuvent profiter de plus de 500 jeux de différents fournisseurs de logiciels de casino, notamment NetEnt, Microgaming et Play'n GO. Avec un service clientèle disponible 24h/24 et 7j/7, Agent spins est un choix sûr pour les joueurs à la recherche d'un nouveau casino en ligne excitant.\n"),
@@ -269,12 +269,12 @@ public class HomeFragment extends Fragment {
             };
 
             horizontalListAdapteradapter =  new HorizontalListAdapter(getContext(),models);
-
+            verticalListAdapter = new VerticalListAdapter(getContext(),models);
 
         }
 
 
-        if(data.equals("Brazil"))
+        else if(data.equals("Brazil"))
         {
             CountryModel[] models = new CountryModel[]{
                     new CountryModel(R.drawable.brazil_2bet,R.drawable.brazil_icon_2pbt,"20 Bet","9.3","\"O 20Bet é um cassino online relativamente novo, mas já fez um grande impacto na indústria de jogos de azar. Com uma ampla seleção de jogos de cassino, bônus generosos e suporte ao cliente de primeira linha, o 20Bet é uma excelente escolha para quem procura uma experiência de cassino online emocionante.\n" +
@@ -302,11 +302,11 @@ public class HomeFragment extends Fragment {
             };
 
             horizontalListAdapteradapter =  new HorizontalListAdapter(getContext(),models);
-
+            verticalListAdapter = new VerticalListAdapter(getContext(),models);
 
         }
 
-        if(data.equals("Italy"))
+        else  if(data.equals("Italy"))
         {
             CountryModel[] models = new CountryModel[]{
                     new CountryModel(R.drawable.italy_casinomidsas,R.drawable.italy_icon_casinoidas,"Casino Midas","4.4","\"Casino Midas è un casinò online che offre una vasta selezione di giochi ai giocatori. Il casinò è noto per il suo bonus di benvenuto del 150% sul primo deposito, fino a €1.000, e 120 giri gratuiti su alcune slot machine selezionate. Il casinò offre anche una varietà di promozioni e bonus regolari ai suoi giocatori, tra cui bonus di ricarica e cashback.\n" +
@@ -347,11 +347,11 @@ public class HomeFragment extends Fragment {
             };
 
             horizontalListAdapteradapter =  new HorizontalListAdapter(getContext(),models);
-
+            verticalListAdapter = new VerticalListAdapter(getContext(),models);
 
         }
 
-        if(data.equals("Russia"))
+        else  if(data.equals("Russia"))
         {
             CountryModel[] models = new CountryModel[]{
                     new CountryModel(R.drawable.betwinner,R.drawable.betwinnericon,"Bet Winner","9.1","Bet Winner - это казино с высоким рейтингом 9.1, которое предлагает щедрые бонусы и множество игр. Их приветственный бонус составляет 200% от первого депозита и 120 бесплатных вращений, что делает его одним из самых щедрых бонусов на рынке. Казино имеет простой и интуитивно понятный интерфейс, что делает его легким в использовании для новых пользователей. Они также предлагают множество различных опций для депозитов и выводов, включая электронные кошельки, банковские карты и многое другое.\n"),
@@ -367,11 +367,11 @@ public class HomeFragment extends Fragment {
             };
 
             horizontalListAdapteradapter =  new HorizontalListAdapter(getContext(),models);
-
+            verticalListAdapter = new VerticalListAdapter(getContext(),models);
 
         }
 
-        if(data.equals("Spain"))
+        else   if(data.equals("Spain"))
         {
             CountryModel[] models = new CountryModel[]{
                     new CountryModel(R.drawable.spain_casino,R.drawable.spain_icon_888,"888","9.7","888 es un casino en línea con una impresionante selección de juegos y generosas ofertas de bonificación. Los nuevos jugadores pueden obtener un bono de bienvenida del 150% en su primer depósito, así como 300 tiradas gratis para maximizar sus ganancias. El casino tiene un sitio web fácil de usar y ofrece un excelente servicio al cliente. 888 también ofrece promociones y bonificaciones regulares para jugadores leales. En general, 888 es un gran lugar para aquellos que buscan una experiencia de casino de primera clase.\n"),
@@ -387,11 +387,11 @@ public class HomeFragment extends Fragment {
             };
 
             horizontalListAdapteradapter =  new HorizontalListAdapter(getContext(),models);
-
+            verticalListAdapter = new VerticalListAdapter(getContext(),models);
 
         }
 
-        if(data.equals("Others"))
+        else   if(data.equals("Others"))
         {
             CountryModel[] models = new CountryModel[]{
                     new CountryModel(R.drawable.canda_888,R.drawable.canada_icon_888,"888","9.1-9.9","888 is a well-established online casino that has been in business since 1997. The casino offers a large selection of games from top software providers, as well as a variety of bonuses and promotions. The welcome bonus at 888 includes a 200% bonus up to a certain amount and 200 free spins, which is a great offer for new players. The casino has a solid reputation in the industry and has won numerous awards for its services.\n"),
@@ -408,7 +408,7 @@ public class HomeFragment extends Fragment {
             };
 
             horizontalListAdapteradapter =  new HorizontalListAdapter(getContext(),models);
-
+            verticalListAdapter = new VerticalListAdapter(getContext(),models);
 
         }
 
