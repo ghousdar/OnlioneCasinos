@@ -3,24 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        app:labelVisibilityMode="unlabeled"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-       android:visibility="gone"
-        app:menu="@menu/bottom_nav_menu" />
+    android:layout_height="match_parent">
 
 
     <fragment
@@ -29,8 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:defaultNavHost="true"
-
-
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,22 +23,16 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:longClickable="true"
-        android:focusable="true"
+        android:background="@drawable/bg"
         android:clickable="true"
-
-        android:background="@drawable/bg">
-
-
-
+        android:elevation="@dimen/_10sdp"
+        android:focusable="true"
+        android:longClickable="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -67,7 +42,7 @@
                     android:id="@+id/btnCross"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_margin="@dimen/_4sdp"
                     android:background="@drawable/cross_button"
                     android:src="@drawable/ic_close" />
@@ -77,12 +52,12 @@
                     android:id="@+id/btnAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
                     android:layout_margin="@dimen/_4sdp"
-                    android:paddingHorizontal="@dimen/_4sdp"
-                    android:textColor="@color/white"
                     android:background="@drawable/ad_button"
-                    android:text="AD" />
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:text="AD"
+                    android:textColor="@color/white" />
 
                 <ImageView
                     android:id="@+id/coinsImage"
@@ -103,11 +78,13 @@
                     android:id="@+id/my_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_above="@+id/my_button"
                     android:layout_below="@+id/coinsImage"
-                    android:layout_marginTop="@dimen/_60sdp"
+                    android:layout_marginBottom="25dp"
+
+                    android:gravity="center"
                     android:text="Join now and get 200 free spins "
                     android:textAlignment="center"
-
                     android:textSize="@dimen/_15sdp" />
 
 
@@ -115,22 +92,28 @@
                     android:id="@+id/my_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/my_text_view"
-                    android:layout_centerHorizontal="true"
+                    android:layout_alignBottom="@+id/three_seven"
                     android:layout_marginHorizontal="@dimen/_40sdp"
-                    android:layout_marginTop="@dimen/_35sdp"
                     android:background="@drawable/btn_bg_selector"
                     android:text="Join now"
                     android:textColor="#FFFFFF" />
 
-
             </RelativeLayout>
-
 
         </LinearLayout>
 
-
     </FrameLayout>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:elevation="0dp"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

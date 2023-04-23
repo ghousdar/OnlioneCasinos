@@ -4,76 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment"
     android:orientation="vertical"
-    android:padding="@dimen/_10sdp">
+    tools:context=".ui.dashboard.DashboardFragment">
 
-<!--    <TextView-->
-<!--        android:id="@+id/text_dashboard"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="8dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textSize="20sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-
-    <TextView
-
+    <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="There are a wide variety of casino games that users can find on online casinos. Some of the most popular games include:"
-        android:textSize="18sp"
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black" />
+        android:background="@color/black"
+        app:title="@string/app_name"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white" />
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="1. Slots - These are the most common games found on online casinos. They come in many different themes and variations, including classic slots, video slots, and progressive jackpot slots."
-        android:textSize="18sp"
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black" />
+        android:layout_height="wrap_content">
 
-    <TextView
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="2. Table Games - These include classic casino games like blackjack, roulette, baccarat, craps, and poker. Some online casinos also offer live dealer versions of these games, where users can play against a real dealer via live video streaming."
-        android:textSize="18sp"
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black" />
+            <TextView
 
-    <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="There are a wide variety of casino games that users can find on online casinos. Some of the most popular games include:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="3. Video Poker - This is a game that combines elements of poker and slot machines. Users play against a computerized dealer and aim to create the best possible hand."
-        android:textSize="18sp"
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="1. Slots - These are the most common games found on online casinos. They come in many different themes and variations, including classic slots, video slots, and progressive jackpot slots."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-    <TextView
+            <TextView
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="4. Specialty Games - These are games that don't fit into the other categories, such as bingo, keno, scratch cards, and virtual sports betting."
-        android:textSize="18sp"
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="2. Table Games - These include classic casino games like blackjack, roulette, baccarat, craps, and poker. Some online casinos also offer live dealer versions of these games, where users can play against a real dealer via live video streaming."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-    <TextView
+            <TextView
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black"
-        android:text="Overall, online casinos offer a wide variety of games to suit every taste and preference."
-        android:textSize="18sp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="3. Video Poker - This is a game that combines elements of poker and slot machines. Users play against a computerized dealer and aim to create the best possible hand."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="4. Specialty Games - These are games that don't fit into the other categories, such as bingo, keno, scratch cards, and virtual sports betting."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="Overall, online casinos offer a wide variety of games to suit every taste and preference."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </ScrollView>
 </LinearLayout>

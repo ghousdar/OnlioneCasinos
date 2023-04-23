@@ -26,9 +26,6 @@ public class MainActivity extends AppCompatActivity {
 // Get an editor to modify the SharedPreferences
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-
-
-
         binding.usa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,16 +43,12 @@ public class MainActivity extends AppCompatActivity {
         binding.australia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 editor.putString("country", "Australia");
                 editor.apply();
-
                 Intent intent = new Intent(MainActivity.this, Home.class);
-
                 startActivity(intent);
             }
         });
-
 
         binding.canada.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,18 +134,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        binding.spain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                editor.putString("country", "Spain");
-                editor.apply();
-
-                Intent intent = new Intent(MainActivity.this, Home.class);
-
-                startActivity(intent);
-
-            }
-        });
+//        binding.spain.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                editor.putString("country", "Spain");
+//                editor.apply();
+//
+//                Intent intent = new Intent(MainActivity.this, Home.class);
+//
+//                startActivity(intent);
+//
+//            }
+//        });
 
 
         binding.other.setOnClickListener(new View.OnClickListener() {

@@ -8,7 +8,8 @@
         <item name="strokeColor">#000000</item>
     </style>
 
-    <style name="Toolbar.TitleCentered" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textAlignment">center</item>
-    </style>
+<!--    <style name="Toolbar.TitleCentered" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">-->
+<!--        <item name="android:textAlignment">center</item>-->
+<!--        <item name="textcolorp"-->
+<!--    </style>-->
 </resources>

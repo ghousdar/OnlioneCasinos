@@ -5,56 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/_10sdp"
     tools:context=".ui.notifications.NotificationsFragment">
 
 
-
-
-    <TextView
-
+    <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black"
-        android:text="Before playing on an online casino, there are a few important things that users should keep in mind:"
-        android:textSize="18sp" />
+        android:background="@color/black"
+        app:title="@string/app_name"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white" />
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black"
-        android:text="1. Check the Legitimacy of the Casino - Make sure that the online casino is licensed and regulated by a reputable authority. This will help ensure that the games are fair and that the casino is operating legally."
-        android:textSize="18sp" />
+        android:layout_height="wrap_content">
 
-    <TextView
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black"
-        android:text="2. Understand the Terms and Conditions - It is important to read the terms and conditions of the online casino carefully. This will help users understand the rules of the games, as well as any restrictions on bonuses or withdrawals."
-        android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="Before playing on an online casino, there are a few important things that users should keep in mind:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-    <TextView
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="1. Check the Legitimacy of the Casino - Make sure that the online casino is licensed and regulated by a reputable authority. This will help ensure that the games are fair and that the casino is operating legally."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black"
-        android:text="3. Set a Budget - It's important to set a budget and stick to it when playing at an online casino. Users should only gamble with money that they can afford to lose."
-        android:textSize="18sp" />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="2. Understand the Terms and Conditions - It is important to read the terms and conditions of the online casino carefully. This will help users understand the rules of the games, as well as any restrictions on bonuses or withdrawals."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="3. Set a Budget - It's important to set a budget and stick to it when playing at an online casino. Users should only gamble with money that they can afford to lose."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
 
+            <TextView
 
-    <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="4. Practice Responsible Gambling - Online casinos offer tools and resources to help users practice responsible gambling. These include setting deposit limits, taking breaks, and self-exclusion options. Users should take advantage of these resources to ensure that their gambling remains fun and enjoyable, and doesn't become a problem."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-        android:layout_margin="@dimen/_4sdp"
-        android:textColor="@color/black"
-        android:text="4. Practice Responsible Gambling - Online casinos offer tools and resources to help users practice responsible gambling. These include setting deposit limits, taking breaks, and self-exclusion options. Users should take advantage of these resources to ensure that their gambling remains fun and enjoyable, and doesn't become a problem."
-        android:textSize="18sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </ScrollView>
 </LinearLayout>

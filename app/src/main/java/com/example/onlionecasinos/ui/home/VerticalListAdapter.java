@@ -43,7 +43,7 @@ public class VerticalListAdapter extends RecyclerView.Adapter<VerticalListAdapte
         binding.name.setText(model.getCasinoBrand());
         binding.rating.setText(model.getCasinorating());
 
-        binding.cardclick.setOnClickListener(v -> {
+        binding.cardClick.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), ReviewActivity.class);
             intent.putExtra("banner_image", model.getImageResource());
             intent.putExtra("icon_image", model.getIconResource());

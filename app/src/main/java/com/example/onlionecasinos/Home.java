@@ -3,29 +3,17 @@ package com.example.onlionecasinos;
 import static android.view.View.GONE;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-import com.example.onlionecasinos.ui.dashboard.DashboardFragment;
-import com.example.onlionecasinos.ui.home.HomeFragment;
-import com.example.onlionecasinos.ui.notifications.NotificationsFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.onlionecasinos.databinding.ActivityHomeBinding;
-import com.google.android.material.navigation.NavigationBarView;
-
-import java.util.ArrayList;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
 
@@ -35,7 +23,6 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
 
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
@@ -48,10 +35,9 @@ public class Home extends AppCompatActivity {
 //                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
 //                .build();
 
-        NavController navController = Navigation.findNavController(this,R.id.nav_host_fragment_activity_home);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_home);
 
-        NavigationUI.setupWithNavController(binding.navView,navController);
-
+        NavigationUI.setupWithNavController(binding.navView, navController);
 
 
 //// Set the item selection listener
@@ -85,15 +71,11 @@ public class Home extends AppCompatActivity {
 //        });
 
 
-
-
-
         binding.btnCross.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 binding.fragmentContainer.setVisibility(GONE);
                 binding.navView.setVisibility(View.VISIBLE);
-
 
 
             }
@@ -110,4 +92,22 @@ public class Home extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        binding.fragmentContainer.setVisibility(View.VISIBLE);
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        binding.fragmentContainer.setVisibility(View.VISIBLE);
+        super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        binding.fragmentContainer.setVisibility(View.VISIBLE);
+        super.onRestart();
+
+    }
 }
