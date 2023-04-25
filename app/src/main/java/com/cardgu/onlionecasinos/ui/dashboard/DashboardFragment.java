@@ -1,16 +1,15 @@
-package com.example.onlionecasinos.ui.dashboard;
+package com.cardgu.onlionecasinos.ui.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.onlionecasinos.databinding.FragmentDashboardBinding;
+import com.brands.cardgu.databinding.FragmentDashboardBinding;
+
 
 public class DashboardFragment extends Fragment {
 

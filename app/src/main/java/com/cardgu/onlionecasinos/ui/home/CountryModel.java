@@ -1,4 +1,4 @@
-package com.example.onlionecasinos.ui.home;
+package com.cardgu.onlionecasinos.ui.home;
 
 public class CountryModel {
     private int imageResource;

@@ -1,4 +1,4 @@
-package com.example.onlionecasinos;
+package com.cardgu.onlionecasinos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,9 +7,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-import com.example.onlionecasinos.databinding.ActivityMainBinding;
+import com.brands.cardgu.databinding.ActivityMainBinding;
+
 
 public class MainActivity extends AppCompatActivity {
 

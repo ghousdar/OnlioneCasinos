@@ -1,8 +1,10 @@
-package com.example.onlionecasinos;
+package com.cardgu.onlionecasinos;
 
 import static android.view.View.GONE;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -12,14 +14,16 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.onlionecasinos.databinding.ActivityHomeBinding;
+import com.brands.cardgu.R;
+import com.brands.cardgu.databinding.ActivityHomeBinding;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
 
     private ActivityHomeBinding binding;
 
-
+String data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +31,43 @@ public class Home extends AppCompatActivity {
 
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
+        // Get the SharedPreferences object
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        data = sharedPreferences.getString("country", "");
+
+
+
+        if (data.equals("USA")) {
+            // Load the image for English language
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_english);
+        } else if(data.equals("Brazil")) {
+            // Load the image for other languages
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_brazil);
+        }
+        else if(data.equals("Brazil")) {
+            // Load the image for other languages
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_brazil);
+        }
+        else if(data.equals("France")) {
+            // Load the image for other languages
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_france);
+        }
+        else if(data.equals("Italy")) {
+            // Load the image for other languages
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_italy);
+        }
+        else if(data.equals("Russia")) {
+            // Load the image for other languages
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_russia);
+        }
+        else if(data.equals("Spain")) {
+            // Load the image for other languages
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_spain);
+        }
+
+
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each

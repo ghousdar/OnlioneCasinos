@@ -1,4 +1,4 @@
-package com.example.onlionecasinos;
+package com.cardgu.onlionecasinos;
 
 import org.junit.Test;
 

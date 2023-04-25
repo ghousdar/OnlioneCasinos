@@ -1,4 +1,4 @@
-package com.example.onlionecasinos;
+package com.cardgu.onlionecasinos;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -7,7 +7,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.onlionecasinos.databinding.ActivityReviewBinding;
+import com.brands.cardgu.databinding.ActivityReviewBinding;
+
 
 public class ReviewActivity extends AppCompatActivity {
 

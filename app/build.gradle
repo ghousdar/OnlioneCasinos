@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.onlionecasinos'
+    namespace 'com.brands.cardgu'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.onlionecasinos"
+        applicationId "com.brands.cardgu"
         minSdk 24
         targetSdk 33
         versionCode 1

@@ -1,24 +1,19 @@
-package com.example.onlionecasinos.ui.home;
+package com.cardgu.onlionecasinos.ui.home;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.onlionecasinos.R;
-import com.example.onlionecasinos.databinding.FragmentHomeBinding;
+import com.brands.cardgu.R;
+import com.brands.cardgu.databinding.FragmentHomeBinding;
 
-import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
