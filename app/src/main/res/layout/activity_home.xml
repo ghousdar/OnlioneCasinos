@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,109 +29,147 @@
         android:focusable="true"
         android:longClickable="true">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent=".17"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <RelativeLayout
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent=".38"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/btnCross"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/_4sdp"
+            android:src="@drawable/x_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="@drawable/ad_button"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:text="AD"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_get_now"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/joinnow_france"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+        <LinearLayout
+            android:id="@+id/joinNow"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@drawable/circle"
+            android:translationZ="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/btnCross"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_margin="@dimen/_4sdp"
-                    android:src="@drawable/x_button" />
-
-
-                <TextView
-                    android:id="@+id/btnAdd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_margin="@dimen/_4sdp"
-                    android:background="@drawable/ad_button"
-                    android:paddingHorizontal="@dimen/_4sdp"
-                    android:text="AD"
-                    android:textColor="@color/white" />
-
-                <!--                <ImageView-->
-                <!--                    android:id="@+id/coinsImage"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="@dimen/_230sdp"-->
-                <!--                    android:src="@drawable/coins" />-->
-
-                <!--                <ImageView-->
-                <!--                    android:id="@+id/three_seven"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginBottom="@dimen/_100sdp"-->
-                <!--                    android:scaleType="fitCenter"-->
-                <!--                    -->
-                <!--                    android:src="@drawable/three_seven" />-->
-
-
-                <ImageView
-                    android:id="@+id/image_get_now"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_120sdp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/joinnow_english" />
-                <!--                <TextView-->
-                <!--                    android:id="@+id/my_text_view"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginTop="@dimen/_85sdp"-->
-                <!--android:layout_marginHorizontal="@dimen/_15sdp"-->
-                <!--                    android:gravity="center"-->
-                <!--                    android:text="Join now!"-->
-                <!--                    android:textAlignment="center"-->
-                <!--                    android:textColor="@color/purple"-->
-                <!--                    android:textSize="@dimen/_45sdp"-->
-                <!--                    android:textStyle="bold" />-->
-
-                <!--                <TextView-->
-                <!--                    android:id="@+id/my_text_view2"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="@dimen/_230sdp"-->
-                <!--                    android:layout_marginHorizontal="@dimen/_15sdp"-->
-                <!--                    android:layout_below="@+id/my_text_view"-->
-
-                <!--                    android:text="And get 200 FS"-->
-                <!--                    android:textAlignment="center"-->
-                <!--                    android:textColor="@color/white"-->
-                <!--                    android:textSize="@dimen/_35sdp"-->
-                <!--                    android:textStyle="bold" />-->
-
-
-                <ImageView
-                    android:id="@+id/my_button"
-
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_160sdp"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/join_now" />
-
-
-                <!--                <androidx.appcompat.widget.AppCompatButton-->
-                <!--                    android:id="@+id/my_button"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_alignBottom="@+id/three_seven"-->
-                <!--                    android:layout_marginHorizontal="@dimen/_40sdp"-->
-                <!--                    android:background="@drawable/btn_bg_selector"-->
-                <!--                    android:text="Join now"-->
-                <!--                    android:textColor="#FFFFFF" />-->
-
-            </RelativeLayout>
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="JOIN NOW!"
+                android:textColor="#FF3C3C"
+                android:textSize="@dimen/_40sdp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
-    </FrameLayout>
+
+        <!--        <RelativeLayout-->
+        <!--            android:id="@+id/relativeLayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content">-->
+
+
+        <!--            &lt;!&ndash;                <ImageView&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:id="@+id/coinsImage"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_height="@dimen/_230sdp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:src="@drawable/coins" />&ndash;&gt;-->
+
+        <!--            &lt;!&ndash;                <ImageView&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:id="@+id/three_seven"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_marginBottom="@dimen/_100sdp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:scaleType="fitCenter"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    &ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:src="@drawable/three_seven" />&ndash;&gt;-->
+
+
+        <!--            &lt;!&ndash;                <TextView&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:id="@+id/my_text_view"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_marginTop="@dimen/_85sdp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;android:layout_marginHorizontal="@dimen/_15sdp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:gravity="center"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:text="Join now!"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:textAlignment="center"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:textColor="@color/purple"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:textSize="@dimen/_45sdp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:textStyle="bold" />&ndash;&gt;-->
+
+        <!--            &lt;!&ndash;                <TextView&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:id="@+id/my_text_view2"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_height="@dimen/_230sdp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_marginHorizontal="@dimen/_15sdp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_below="@+id/my_text_view"&ndash;&gt;-->
+
+        <!--            &lt;!&ndash;                    android:text="And get 200 FS"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:textAlignment="center"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:textColor="@color/white"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:textSize="@dimen/_35sdp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:textStyle="bold" />&ndash;&gt;-->
+
+
+        <!--           -->
+
+        <!--            &lt;!&ndash;                <androidx.appcompat.widget.AppCompatButton&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:id="@+id/my_button"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_alignBottom="@+id/three_seven"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:layout_marginHorizontal="@dimen/_40sdp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:background="@drawable/btn_bg_selector"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:text="Join now"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                    android:textColor="#FFFFFF" />&ndash;&gt;-->
+
+        <!--        </RelativeLayout>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"

@@ -15,14 +15,14 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import com.brands.cardgu.databinding.ActivityHomeBinding;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
 
     private ActivityHomeBinding binding;
 
-String data;
+    String data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,35 +37,28 @@ String data;
         data = sharedPreferences.getString("country", "");
 
 
-
         if (data.equals("USA")) {
             // Load the image for English language
             binding.imageGetNow.setImageResource(R.drawable.joinnow_english);
-        } else if(data.equals("Brazil")) {
+        } else if (data.equals("Brazil")) {
             // Load the image for other languages
             binding.imageGetNow.setImageResource(R.drawable.joinnow_brazil);
-        }
-        else if(data.equals("Brazil")) {
-            // Load the image for other languages
-            binding.imageGetNow.setImageResource(R.drawable.joinnow_brazil);
-        }
-        else if(data.equals("France")) {
+        } else if (data.equals("France")) {
             // Load the image for other languages
             binding.imageGetNow.setImageResource(R.drawable.joinnow_france);
-        }
-        else if(data.equals("Italy")) {
+        } else if (data.equals("Germany")) {
+            // Load the image for other languages
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_german);
+        } else if (data.equals("Italy")) {//
             // Load the image for other languages
             binding.imageGetNow.setImageResource(R.drawable.joinnow_italy);
-        }
-        else if(data.equals("Russia")) {
+        } else if (data.equals("Russia")) {//
             // Load the image for other languages
             binding.imageGetNow.setImageResource(R.drawable.joinnow_russia);
-        }
-        else if(data.equals("Spain")) {
+        } else if (data.equals("Spain")) {//
             // Load the image for other languages
             binding.imageGetNow.setImageResource(R.drawable.joinnow_spain);
         }
-
 
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
@@ -121,13 +114,15 @@ String data;
             }
         });
 
-        binding.myButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri uri = Uri.parse("https://listmake.shop"); // missing 'http://' will cause crashed
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-            }
+        binding.imageGetNow.setOnClickListener(v -> {
+            Uri uri = Uri.parse("https://listmake.shop"); // missing 'http://' will cause crashed
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
+        binding.joinNow.setOnClickListener(view -> {
+            Uri uri = Uri.parse("https://listmake.shop"); // missing 'http://' will cause crashed
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         });
 
     }
