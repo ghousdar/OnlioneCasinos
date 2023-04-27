@@ -1,4 +1,4 @@
-package com.cardgu.onlionecasinos.ui.notifications;
+package com.brands.cardgu.ui.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,22 +8,23 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.brands.cardgu.databinding.FragmentNotificationsBinding;
+import com.brands.cardgu.databinding.FragmentDashboardBinding;
 
 
-public class NotificationsFragment extends Fragment {
+public class DashboardFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentDashboardBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-//        final TextView textView = binding.textNotifications;
-//        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textDashboard;
+//        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
 
 
         return root;

@@ -1,4 +1,4 @@
-package com.cardgu.onlionecasinos;
+package com.brands.cardgu;
 
 import android.content.Context;
 

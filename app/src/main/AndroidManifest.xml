@@ -12,14 +12,14 @@
         android:theme="@style/Theme.OnlioneCasinos"
         tools:targetApi="31">
         <activity
-            android:name="com.cardgu.onlionecasinos.ReviewActivity"
+            android:name="com.brands.cardgu.ReviewActivity"
             android:exported="false" />
         <activity
-            android:name="com.cardgu.onlionecasinos.Home"
+            android:name="com.brands.cardgu.Home"
             android:exported="false"
             android:label="@string/title_activity_home" />
         <activity
-            android:name="com.cardgu.onlionecasinos.MainActivity"
+            android:name="com.brands.cardgu.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

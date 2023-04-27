@@ -1,4 +1,4 @@
-package com.cardgu.onlionecasinos;
+package com.brands.cardgu;
 
 import static android.view.View.GONE;
 
@@ -14,7 +14,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
-import com.brands.cardgu.R;
 import com.brands.cardgu.databinding.ActivityHomeBinding;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;

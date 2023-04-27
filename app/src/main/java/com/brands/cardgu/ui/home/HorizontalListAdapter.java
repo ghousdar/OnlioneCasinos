@@ -1,4 +1,4 @@
-package com.cardgu.onlionecasinos.ui.home;
+package com.brands.cardgu.ui.home;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,42 +8,40 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.brands.cardgu.databinding.VerticallayoutBinding;
+import com.brands.cardgu.databinding.ImagelayoutBinding;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.cardgu.onlionecasinos.ReviewActivity;
+import com.brands.cardgu.ReviewActivity;
 
 
-public class VerticalListAdapter extends RecyclerView.Adapter<VerticalListAdapter.ViewHolder> {
+public class HorizontalListAdapter extends RecyclerView.Adapter<HorizontalListAdapter.ViewHolder> {
 
-    VerticallayoutBinding binding;
+
+    private ImagelayoutBinding binding;
     private CountryModel[] mModels;
     private Context context;
 
-    public VerticalListAdapter(Context context, CountryModel[] mModels) {
+    public HorizontalListAdapter(Context context, CountryModel[] mModels) {
         this.context = context;
         this.mModels = mModels;
     }
 
     @NonNull
     @Override
-    public VerticalListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        binding = VerticallayoutBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        binding = ImagelayoutBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
         return new ViewHolder(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VerticalListAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull HorizontalListAdapter.ViewHolder holder, int position) {
         CountryModel model = mModels[position];
 
-        Glide.with(context).load(model.getIconResource())
+        Glide.with(context).load(model.getImageResource())
 
-                .diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.binding.icon);
+                .diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.binding.catImage);
 
-        binding.name.setText(model.getCasinoBrand());
-        binding.rating.setText(model.getCasinorating());
-
-        binding.cardClick.setOnClickListener(v -> {
+        binding.catImage.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), ReviewActivity.class);
             intent.putExtra("banner_image", model.getImageResource());
             intent.putExtra("icon_image", model.getIconResource());
@@ -53,6 +51,7 @@ public class VerticalListAdapter extends RecyclerView.Adapter<VerticalListAdapte
             v.getContext().startActivity(intent);
         });
 
+
     }
 
     @Override
@@ -61,9 +60,9 @@ public class VerticalListAdapter extends RecyclerView.Adapter<VerticalListAdapte
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        VerticallayoutBinding binding;
+        ImagelayoutBinding binding;
 
-        public ViewHolder(@NonNull VerticallayoutBinding binding) {
+        public ViewHolder(@NonNull ImagelayoutBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
 
