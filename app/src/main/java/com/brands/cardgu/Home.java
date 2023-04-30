@@ -40,7 +40,15 @@ public class Home extends AppCompatActivity {
         if (data.equals("USA")) {
             // Load the image for English language
             binding.imageGetNow.setImageResource(R.drawable.joinnow_english);
-        } else if (data.equals("Brazil")) {
+        } else if (data.equals("Canada")) {
+            // Load the image for other languages
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_english);
+        }
+        else if (data.equals("Australia")) {
+            // Load the image for other languages
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_english);
+        }
+        else if (data.equals("Brazil")) {
             // Load the image for other languages
             binding.imageGetNow.setImageResource(R.drawable.joinnow_brazil);
         } else if (data.equals("France")) {
@@ -58,8 +66,10 @@ public class Home extends AppCompatActivity {
         } else if (data.equals("Spain")) {//
             // Load the image for other languages
             binding.imageGetNow.setImageResource(R.drawable.joinnow_spain);
+        } else if (data.equals("Others")) {//
+            // Load the image for other languages
+            binding.imageGetNow.setImageResource(R.drawable.joinnow_english);
         }
-
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
