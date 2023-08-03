@@ -84,22 +84,17 @@
 
         <LinearLayout
             android:id="@+id/joinNow"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="@dimen/_150sdp"
-            android:background="@drawable/circle"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="@dimen/_120sdp"
             android:translationZ="@dimen/_5sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="JOIN NOW!"
-                android:textColor="#FF3C3C"
-                android:textSize="@dimen/_40sdp"
-                android:textStyle="bold" />
+                android:src="@drawable/join_now_ad" />
 
         </LinearLayout>
 

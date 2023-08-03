@@ -36,10 +36,18 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/usa_banner" />
 
+            <ImageView
+                android:id="@+id/ivJoin"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp"
+                android:src="@drawable/join_btn" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="16dp">
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingHorizontal="16dp">
 
                 <ImageView
                     android:id="@+id/icon_image"
@@ -51,11 +59,9 @@
                     android:id="@+id/rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/icon_image"
                     android:layout_alignBottom="@+id/icon_image"
                     android:layout_marginLeft="@dimen/_16sdp"
-                    android:layout_toRightOf="@id/icon_image"
-
+                    android:layout_toEndOf="@id/icon_image"
                     android:text="rating" />
 
             </RelativeLayout>

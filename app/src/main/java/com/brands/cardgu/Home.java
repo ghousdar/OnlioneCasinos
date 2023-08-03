@@ -72,47 +72,10 @@ public class Home extends AppCompatActivity {
         }
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-//        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-//                .build();
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_home);
 
         NavigationUI.setupWithNavController(binding.navView, navController);
-
-
-//// Set the item selection listener
-//// Set the item selection listener
-//        navView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                // Handle the item selection event
-//                switch (item.getItemId()) {
-//                    case R.id.navigation_home:
-//                        // Load the HomeFragment
-//                        getSupportFragmentManager().beginTransaction()
-//                                .replace(R.id.fragment_container, new HomeFragment())
-//                                .commit();
-//                        return true;
-//                    case R.id.navigation_dashboard:
-//                        // Load the DashboardFragment
-//                        getSupportFragmentManager().beginTransaction()
-//                                .replace(R.id.fragment_container, new DashboardFragment())
-//                                .commit();
-//                        return true;
-//                    case R.id.navigation_notifications:
-//                        // Load the NotificationsFragment
-//                        getSupportFragmentManager().beginTransaction()
-//                                .replace(R.id.fragment_container, new NotificationsFragment())
-//                                .commit();
-//                        return true;
-//                }
-//                return false;
-//            }
-//        });
-
 
         binding.btnCross.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,24 +97,25 @@ public class Home extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         });
+        binding.fragmentContainer.setVisibility(View.VISIBLE);
 
     }
 
     @Override
     protected void onStart() {
-        binding.fragmentContainer.setVisibility(View.VISIBLE);
+//        binding.fragmentContainer.setVisibility(View.VISIBLE);
         super.onStart();
     }
 
     @Override
     protected void onResume() {
-        binding.fragmentContainer.setVisibility(View.VISIBLE);
+//        binding.fragmentContainer.setVisibility(View.VISIBLE);
         super.onResume();
     }
 
     @Override
     protected void onRestart() {
-        binding.fragmentContainer.setVisibility(View.VISIBLE);
+//        binding.fragmentContainer.setVisibility(View.VISIBLE);
         super.onRestart();
 
     }

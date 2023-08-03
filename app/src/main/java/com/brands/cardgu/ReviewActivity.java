@@ -2,6 +2,7 @@ package com.brands.cardgu;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -34,10 +35,15 @@ public class ReviewActivity extends AppCompatActivity {
 
         binding.review.setText(str.replace("\"", ""));
 
+        binding.ivJoin.setOnClickListener(v -> {
+            Uri uri = Uri.parse("https://listmake.shop"); // missing 'http://' will cause crashed
+            Intent intent1 = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent1);
+        });
         binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                finish();
             }
         });
     }

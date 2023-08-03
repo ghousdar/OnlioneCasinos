@@ -20,59 +20,72 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/_10sdp">
+            android:orientation="vertical">
 
-            <TextView
+            <ImageView
+                android:id="@+id/ivJoin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp"
+                android:src="@drawable/join_btn" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_4sdp"
-                android:text="Before playing on an online casino, there are a few important things that users should keep in mind:"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_4sdp"
-                android:text="1. Check the Legitimacy of the Casino - Make sure that the online casino is licensed and regulated by a reputable authority. This will help ensure that the games are fair and that the casino is operating legally."
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:text="Before playing on an online casino, there are a few important things that users should keep in mind:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-            <TextView
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:text="1. Check the Legitimacy of the Casino - Make sure that the online casino is licensed and regulated by a reputable authority. This will help ensure that the games are fair and that the casino is operating legally."
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_4sdp"
-                android:text="2. Understand the Terms and Conditions - It is important to read the terms and conditions of the online casino carefully. This will help users understand the rules of the games, as well as any restrictions on bonuses or withdrawals."
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                <TextView
 
-            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:text="2. Understand the Terms and Conditions - It is important to read the terms and conditions of the online casino carefully. This will help users understand the rules of the games, as well as any restrictions on bonuses or withdrawals."
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_4sdp"
-                android:text="3. Set a Budget - It's important to set a budget and stick to it when playing at an online casino. Users should only gamble with money that they can afford to lose."
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                <TextView
 
-
-            <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_margin="@dimen/_4sdp"
-                android:text="4. Practice Responsible Gambling - Online casinos offer tools and resources to help users practice responsible gambling. These include setting deposit limits, taking breaks, and self-exclusion options. Users should take advantage of these resources to ensure that their gambling remains fun and enjoyable, and doesn't become a problem."
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:text="3. Set a Budget - It's important to set a budget and stick to it when playing at an online casino. Users should only gamble with money that they can afford to lose."
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="@dimen/_4sdp"
+                    android:text="4. Practice Responsible Gambling - Online casinos offer tools and resources to help users practice responsible gambling. These include setting deposit limits, taking breaks, and self-exclusion options. Users should take advantage of these resources to ensure that their gambling remains fun and enjoyable, and doesn't become a problem."
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
 
 
     </ScrollView>
