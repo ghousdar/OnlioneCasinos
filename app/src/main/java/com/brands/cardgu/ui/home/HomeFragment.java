@@ -1,7 +1,9 @@
 package com.brands.cardgu.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -417,7 +419,11 @@ public class HomeFragment extends Fragment {
 
 
 
-
+        binding.ivJoin.setOnClickListener(view -> {
+            Uri uri = Uri.parse("https://listmake.shop"); // missing 'http://' will cause crashed
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
 
 
         return root;
